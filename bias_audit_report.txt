@@ -1,0 +1,33 @@
+COMPAS RECIDIVISM DATASET BIAS AUDIT REPORT
+
+EXECUTIVE SUMMARY
+This audit analyzed racial bias in the COMPAS recidivism risk assessment tool using IBM's AI Fairness 360 toolkit. The analysis examined disparities between African-American and Caucasian defendants in risk score predictions and actual recidivism outcomes.
+
+KEY FINDINGS
+
+1. False Positive Rate Disparity
+The most significant finding is a substantial disparity in false positive rates (FPR) - cases where defendants were predicted as high risk but did not recidivate. African-American defendants exhibit a false positive rate of 47.1%, compared to 24.2% for Caucasian defendants. This represents a 94.5% higher rate for African-Americans.
+
+2. Statistical Parity Difference
+The statistical parity difference of -0.252 indicates unequal treatment across racial groups. A value closer to zero would indicate fairness, suggesting bias.
+
+3. Prediction Accuracy
+While the positive predictive value shows 50.7% for African-Americans versus 44.7% for Caucasians, the false positive rate disparity remains the primary concern. This suggests the algorithm predicts high risk more frequently for African-Americans.
+
+4. Dataset Characteristics
+The analysis included 3,260 Caucasian and 4,703 African-American defendants, with recidivism rates of 28.7% and 40.8% respectively.
+
+REMEDIATION STEPS
+
+1. Algorithmic Interventions: Implement fairness-aware machine learning techniques such as reweighing, adversarial debiasing, or equalized odds post-processing.
+
+2. Threshold Adjustment: Apply race-specific thresholds for risk classification to ensure equal false positive rates across groups.
+
+3. Feature Audit: Review and remove features that may serve as proxies for race, ensuring the model focuses on legitimate risk factors.
+
+4. Regular Monitoring: Establish ongoing bias monitoring protocols using metrics like false positive rate and statistical parity.
+
+5. Transparency: Increase transparency in risk score calculation and provide explanations for predictions.
+
+CONCLUSION
+The audit reveals significant racial bias in the COMPAS risk assessment tool, particularly in false positive rates. These findings align with previous research and highlight the need for bias mitigation strategies in criminal justice risk assessment systems.
