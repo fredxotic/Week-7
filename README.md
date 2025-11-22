@@ -1,4 +1,4 @@
-# AI Ethics Course Project
+# Week 7 Assignment - AI For Software Engineering
 
 This repository contains the complete work for the AI Ethics course assignment, including case study analyses, practical bias audit implementation, and ethical reflections.
 
